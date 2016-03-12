@@ -1,0 +1,42 @@
+ name: UltraWarn
+ version: 1.0.0
+ description: This is the plugin.yml for UltraWarn
+ author: DUFC_Liam
+ authors: [] 
+ website: http://dev.bukkit.org/bukkit-plugins/ultrawarn/
+ 
+ main: me.LiamPlugins.UltraWarn
+ database: false
+ depend: []
+ 
+ commands:
+   warn:
+     description: ---
+     permission: opverify.verify
+     usage: Syntax error! Simply type "/OpVerify" to get information.
+   warn clear:
+     description: ---
+     permission: opverify.verify
+     usage: Syntax error! Simply type "/OpVerify" to get information.
+   warn info:
+     description: ---
+     permission: opverify.verify
+     usage: Syntax error! Simply type "/OpVerify" to get information.
+ 
+ permissions:
+   ultrawarn.*:
+     description: Gives access to all UltraWarn commands
+     default: op
+     children:
+       ultrawarn.warn: true
+       ultrawarn.other.info: true
+       ultrawarn.self.info: true
+   ultrawarn.warn:
+     description: You can warn people with this
+     default: op
+   ultrawarn.other.info:
+     description: Lets you view other peoples information
+     default: op
+   ultrawarn.self.info:
+     description: Lets you get your warning information
+     default: op
